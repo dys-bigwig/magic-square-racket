@@ -10,7 +10,7 @@
 
 (define (vector-ref-posn v p)
 	(vector-ref* v (posn-y p)
-							   (posn-x p)))
+		       (posn-x p)))
 
 (define (vector-set* v y x a)
 	(lens-set (vector-ref-nested-lens y x) v a))
