@@ -27,7 +27,7 @@
     (define down (posn (modulo (add1 (posn-y p)) o)
                        (modulo (posn-x p) o)))
     (cond
-      [(positive? (vector-ref-posn v up+right)) down] ;squares initialised to 0 - positive means square has been taken/visited
+      [(positive? (vector-ref-posn v up+right)) down] ;vector initialised to 0 - positive means posn has been taken/visited
       [else up+right]))
   (let loop ([v (vector* o o)]
              [p (posn 0 1)]
